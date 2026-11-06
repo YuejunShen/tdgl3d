@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="180mm" height="112.5mm" viewBox="0 0 1600 1000" role="img" aria-labelledby="figure-title figure-description">
+  <title id="figure-title">3D scalar TDGL capacitor: device structure and boundary conditions</title>
+  <desc id="figure-description">Editable vector schematic based on 3D_TDGL_derivation.tex. Ideal electrodes surround dielectric/BTO/dielectric layers. The upper electrode is grounded and the lower electrode is driven by V(t). Polarization and potential are periodic in x and y. Robin polarization conditions use the outward normal: partial P / partial n = -P / lambda, with lambda_bottom = lambda_top = 5 nm. In the positive z direction, partial P / partial z = +P / lambda_bottom at z = 0 and -P / lambda_top at z = h_f. Potential and normal electric displacement are continuous across both interfaces. Every label is SVG text and every graphical element is a vector object.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #202529; font-size: 22px; }
+      .heading { font-size: 29px; font-weight: 600; }
+      .panel-letter { font-size: 34px; font-weight: 700; }
+      .small { font-size: 19px; }
+      .equation { font-size: 26px; }
+      .math { font-family: Arial, Helvetica, sans-serif; font-style: italic; }
+      .sub { font-size: 70%; baseline-shift: sub; }
+      .outline { stroke: #343c42; stroke-width: 1.5; stroke-linejoin: round; }
+      .leader { fill: none; stroke: #485158; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .fine { fill: none; stroke: #667078; stroke-width: 1.3; }
+      .axis { fill: none; stroke: #283238; stroke-width: 1.8; }
+    </style>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0,0 L 10,5 L 0,10 Z" fill="#283238"/></marker>
+  </defs>
+
+  <g id="background"><rect width="1600" height="1000" fill="#ffffff"/></g>
+
+  <g id="panel-headings">
+    <text id="panel-a-letter" class="panel-letter" x="45" y="90">a</text>
+    <text id="panel-a-title" class="heading" x="94" y="88">Device geometry</text>
+    <text id="panel-b-letter" class="panel-letter" x="880" y="90">b</text>
+    <text id="panel-b-title" class="heading" x="929" y="88">Boundary conditions</text>
+  </g>
+
+  <!-- Each physical layer is an independently selectable group. -->
+  <g id="device-3d">
+    <g id="bottom-electrode-3d">
+      <polygon class="outline" fill="#7e858a" points="70,580 370,580 370,608 70,608"/>
+      <polygon class="outline" fill="#626b72" points="370,580 480,505 480,533 370,608"/>
+    </g>
+    <g id="bottom-dielectric-3d">
+      <polygon class="outline" fill="#f6e9bd" points="70,554 370,554 370,580 70,580"/>
+      <polygon class="outline" fill="#e4d39c" points="370,554 480,479 480,505 370,580"/>
+    </g>
+    <g id="bto-3d">
+      <polygon class="outline" fill="#d4e9f3" points="70,334 370,334 370,554 70,554"/>
+      <polygon class="outline" fill="#b9d8e8" points="370,334 480,259 480,479 370,554"/>
+    </g>
+    <g id="domain-walls-3d" fill="none" stroke="#90b2c4" stroke-width="1.2">
+      <path d="M170,334 V554"/>
+      <path d="M270,334 V554"/>
+      <path d="M425,296.5 V516.5"/>
+    </g>
+    <g id="domain-polarization-arrows">
+      <g id="positive-domain-1" fill="#df7966"><path d="M114,492 V415 H104 L120,389 L136,415 H126 V492 Z"/></g>
+      <g id="negative-domain-1" fill="#4a7dbb"><path d="M214,389 V466 H204 L220,492 L236,466 H226 V389 Z"/></g>
+      <g id="positive-domain-2" fill="#df7966"><path d="M314,492 V415 H304 L320,389 L336,415 H326 V492 Z"/></g>
+      <g id="negative-domain-2" fill="#4a7dbb"><path d="M443,340 V419 H434 L449,445 L464,419 H455 V340 Z"/></g>
+    </g>
+    <g id="top-dielectric-3d">
+      <polygon class="outline" fill="#f6e9bd" points="70,308 370,308 370,334 70,334"/>
+      <polygon class="outline" fill="#e4d39c" points="370,308 480,233 480,259 370,334"/>
+    </g>
+    <g id="top-electrode-3d">
+      <polygon class="outline" fill="#7e858a" points="70,280 370,280 370,308 70,308"/>
+      <polygon class="outline" fill="#626b72" points="370,280 480,205 480,233 370,308"/>
+      <polygon class="outline" fill="#a4aaae" points="70,280 370,280 480,205 180,205"/>
+    </g>
+  </g>
+
+  <g id="device-layer-labels">
+    <g id="top-electrode-label">
+      <path class="leader" d="M450,239 L497,224 H516"/><circle cx="450" cy="239" r="3" fill="#343c42" stroke="#fff" stroke-width="1.5"/>
+      <text x="529" y="231">Top electrode · <tspan class="math">φ</tspan> = 0</text>
+    </g>
+    <g id="top-dielectric-label">
+      <path class="leader" d="M450,272 L494,284 H516"/><circle cx="450" cy="272" r="3" fill="#343c42" stroke="#fff" stroke-width="1.5"/>
+      <text x="529" y="292">Dielectric · <tspan class="math">h<tspan class="sub">d</tspan></tspan> = 1 nm</text>
+    </g>
+    <g id="bto-label">
+      <path class="leader" d="M465,402 H516"/><circle cx="465" cy="402" r="3" fill="#343c42" stroke="#fff" stroke-width="1.5"/>
+      <text x="529" y="410">BTO · <tspan class="math">h<tspan class="sub">f</tspan></tspan> = 50 nm</text>
+    </g>
+    <g id="bottom-dielectric-label">
+      <path class="leader" d="M450,514 L495,521 H516"/><circle cx="450" cy="514" r="3" fill="#343c42" stroke="#fff" stroke-width="1.5"/>
+      <text x="529" y="529">Dielectric · <tspan class="math">h<tspan class="sub">d</tspan></tspan> = 1 nm</text>
+    </g>
+    <g id="bottom-electrode-label">
+      <path class="leader" d="M450,540 L495,583 H516"/><circle cx="450" cy="540" r="3" fill="#343c42" stroke="#fff" stroke-width="1.5"/>
+      <text x="529" y="591">Bottom electrode · <tspan class="math">φ = V(t)</tspan></text>
+    </g>
+  </g>
+
+  <g id="lateral-dimensions">
+    <path class="fine" d="M70,619 V651 M370,619 V651 M382,608 L400,657 M485,539 L503,588"/>
+    <path class="axis" marker-start="url(#arrow-dark)" marker-end="url(#arrow-dark)" d="M74,640 H366"/>
+    <text class="math" x="220" y="679" text-anchor="middle">L<tspan class="sub">x</tspan></text>
+    <path class="axis" marker-start="url(#arrow-dark)" marker-end="url(#arrow-dark)" d="M397,648 L499,578"/>
+    <text class="math" x="460" y="657">L<tspan class="sub">y</tspan></text>
+  </g>
+
+  <g id="coordinate-triad">
+    <path class="axis" marker-end="url(#arrow-dark)" d="M90,806 H180"/>
+    <path class="axis" marker-end="url(#arrow-dark)" d="M90,806 L155,758"/>
+    <path class="axis" marker-end="url(#arrow-dark)" d="M90,806 V714"/>
+    <text class="math" x="190" y="814">x</text><text class="math" x="165" y="756">y</text><text class="math" x="84" y="701">z</text>
+  </g>
+
+  <g id="periodic-boundary-indicator">
+    <path class="axis" marker-end="url(#arrow-dark)" d="M480,741 C445,716 394,716 359,741"/>
+    <path class="axis" marker-end="url(#arrow-dark)" d="M359,795 C394,820 445,820 480,795"/>
+    <text x="420" y="776" text-anchor="middle">Periodic in <tspan class="math">x</tspan> and <tspan class="math">y</tspan></text>
+    <text class="small" x="420" y="851" text-anchor="middle" fill="#58656d">For both <tspan class="math">P</tspan> and <tspan class="math">φ</tspan></text>
+  </g>
+
+  <g id="polarization-legend">
+    <path fill="#df7966" d="M83,923 V895 H75 L88,874 L101,895 H93 V923 Z"/>
+    <text class="math" x="112" y="908">+P<tspan class="sub">z</tspan></text>
+    <path fill="#4a7dbb" d="M230,874 V902 H222 L235,923 L248,902 H240 V874 Z"/>
+    <text class="math" x="260" y="908">−P<tspan class="sub">z</tspan></text>
+    <path class="fine" d="M341,878 V921"/>
+    <text x="366" y="908">Illustrative 180° domains</text>
+  </g>
+
+  <g id="boundary-cross-section">
+    <g id="cross-section-bottom-electrode"><rect class="outline" fill="#7e858a" x="1035" y="565" width="200" height="28"/></g>
+    <g id="cross-section-bottom-dielectric"><rect class="outline" fill="#f6e9bd" x="1035" y="523" width="200" height="42"/></g>
+    <g id="cross-section-bto"><rect class="outline" fill="#d4e9f3" x="1035" y="310" width="200" height="213"/></g>
+    <g id="cross-section-top-dielectric"><rect class="outline" fill="#f6e9bd" x="1035" y="268" width="200" height="42"/></g>
+    <g id="cross-section-top-electrode"><rect class="outline" fill="#7e858a" x="1035" y="240" width="200" height="28"/></g>
+    <g id="cross-section-material-labels" text-anchor="middle">
+      <text x="1135" y="296" class="small math">ε<tspan class="sub">d</tspan> = 300</text>
+      <text x="1135" y="417" font-weight="600">BTO</text>
+      <text x="1135" y="451" class="math">ε<tspan class="sub">f</tspan> = 600</text>
+      <text x="1135" y="551" class="small math">ε<tspan class="sub">d</tspan> = 300</text>
+    </g>
+  </g>
+
+  <g id="electrode-potential-boundary-conditions" text-anchor="middle">
+    <text class="math" x="1135" y="215" font-size="26">φ = 0</text>
+    <text class="math" x="1135" y="635" font-size="26">φ = V(t)</text>
+  </g>
+
+  <g id="z-axis-and-interface-heights">
+    <path class="axis" marker-end="url(#arrow-dark)" d="M992,611 V177"/>
+    <text class="math" x="992" y="159" text-anchor="middle">z</text>
+    <path class="fine" d="M983,268 H1004 M983,310 H1004 M983,523 H1004 M983,565 H1004"/>
+    <g text-anchor="end" class="math">
+      <text x="972" y="274">h<tspan class="sub">f</tspan> + h<tspan class="sub">d</tspan></text>
+      <text x="972" y="317">h<tspan class="sub">f</tspan></text>
+      <text x="972" y="530">0</text>
+      <text x="972" y="572">−h<tspan class="sub">d</tspan></text>
+    </g>
+  </g>
+
+  <g id="polarization-robin-boundary-conditions">
+    <circle cx="1060" cy="310" r="3.5" fill="#283238"/>
+    <path class="leader" d="M1060,310 L1050,330 H1060"/>
+    <text class="math small" x="1070" y="350">∂P/∂z = −P/λ<tspan class="sub">t</tspan></text>
+    <circle cx="1060" cy="523" r="3.5" fill="#283238"/>
+    <path class="leader" d="M1060,523 L1050,480 H1060"/>
+    <text class="math small" x="1070" y="498">∂P/∂z = +P/λ<tspan class="sub">b</tspan></text>
+    <text x="900" y="681">Robin: <tspan class="math">∂P/∂n = −P/λ</tspan>; <tspan class="math">λ<tspan class="sub">b</tspan> = λ<tspan class="sub">t</tspan></tspan> = 5 nm</text>
+  </g>
+
+  <g id="interface-electrostatic-boundary-conditions">
+    <path class="leader" d="M1258,310 C1276,310 1276,323 1276,336 V397 C1276,409 1280,416 1291,416 C1280,416 1276,424 1276,437 V497 C1276,510 1276,523 1258,523"/>
+    <text x="1312" y="353" font-size="20" font-weight="600">At both interfaces</text>
+    <text class="math" x="1312" y="395">φ<tspan class="sub">f</tspan> = φ<tspan class="sub">d</tspan></text>
+    <text class="math" x="1312" y="442">D<tspan class="sub">z,f</tspan> = D<tspan class="sub">z,d</tspan></text>
+    <text class="math" x="1312" y="489">σ<tspan class="sub" font-style="normal">free</tspan> = 0</text>
+  </g>
+
+  <g id="model-equations">
+    <text class="equation" x="900" y="733"><tspan font-weight="600" font-style="italic">P</tspan><tspan class="sub">FE</tspan><tspan class="math"> = P(x,y,z,t) ẑ</tspan></text>
+    <text class="equation" x="900" y="796"><tspan font-weight="600" font-style="italic">D</tspan><tspan class="math"> = ε</tspan><tspan class="sub">0</tspan><tspan class="math">ε</tspan><tspan font-weight="600" font-style="italic">E</tspan><tspan class="math"> + χ</tspan><tspan class="sub">f</tspan><tspan class="math">Pẑ</tspan></text>
+    <text class="equation" x="1302" y="796"><tspan font-weight="600" font-style="italic">E</tspan><tspan class="math"> = −∇φ</tspan></text>
+    <text class="equation" x="900" y="859">∇·<tspan font-weight="600" font-style="italic">D</tspan> = 0</text>
+  </g>
+
+  <g id="figure-note"><text class="small" x="45" y="973" fill="#58656d">Schematic, not to scale; dielectric thicknesses are model assumptions.</text></g>
+</svg>

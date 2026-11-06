@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tdgl3d"
+version = "0.1.0"
+description = "3D time-dependent Ginzburg-Landau (Model A) simulation of ferroelectric capacitors with self-consistent layered electrostatics"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Yuejun Shen" }]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+notebook = ["jupyter", "ipython"]
+
+[tool.setuptools]
+packages = ["tdgl3d"]

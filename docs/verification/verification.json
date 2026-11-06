@@ -1,0 +1,82 @@
+{
+  "physical_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 20,
+    "failed": 0
+  },
+  "pdf": {
+    "file": "3D_TDGL_derivation.pdf",
+    "pages": 9,
+    "latex_errors": 0,
+    "unresolved_references": 0,
+    "overfull_boxes": 0
+  },
+  "unified_notebook": {
+    "file": "3D_TDGL.ipynb",
+    "executed_code_cells": 9,
+    "errors": 0,
+    "presets_simulated": [
+      "zero",
+      "step_hold",
+      "hold_release",
+      "triangle",
+      "sine",
+      "trapezoid",
+      "two_step",
+      "pund",
+      "custom",
+      "direct_electrode_animation"
+    ],
+    "tests_passed": 20,
+    "default_configuration": "0.4 V for 40 t0; sudden removal; V=0 for 100 t0; 10 K noise",
+    "default_result_directory": "runs/hold_release_93b0caecd266",
+    "animation_frames": 70,
+    "six_panel_full_stack_animation": true,
+    "charge_impulses_separate": true,
+    "cache_checks": true,
+    "optional_stationarity_check": true,
+    "main_solver_changed": false,
+    "final_mean_P_C_per_m2": 0.16947212052195854,
+    "historical_results_directory": "results_history",
+    "unique_historical_results_preserved": true
+  },
+  "note": "Implementation checks and illustrative simulations; parameters are not calibrated to the experimental device.",
+  "cleanup": {
+    "removed_legacy_notebooks": 5,
+    "removed_example_runners": 2,
+    "removed_duplicate_update_tests": 2,
+    "redundant_pulse_off_directory_removed": true,
+    "waveform_test_helpers": "tests/reference_waveforms.py",
+    "history_directories": {
+      "eq14_fast_large_results": "results_history/eq14_fast_large_results",
+      "eq14_notebook_results": "results_history/eq14_notebook_results",
+      "eq14_step_hold_T10_results": "results_history/eq14_step_hold_T10_results",
+      "eq14_step_hold_results": "results_history/eq14_step_hold_results",
+      "eq14_zero_voltage_relaxation_results": "results_history/eq14_zero_voltage_relaxation_results",
+      "example_results": "results_history/example_results",
+      "notebook_results": "results_history/notebook_results"
+    },
+    "previous_cleanup_bytes": 163538794
+  },
+  "numerical_section": {
+    "revised_date": "2026-10-31",
+    "topics": [
+      "Normalized lateral Fourier transform and periodic boundaries",
+      "Layered Poisson finite-volume fluxes and electrode Dirichlet/interface conditions",
+      "Reflecting P boundaries, linear/nonlinear TDGL split and actual ETD2 update",
+      "Filtered thermal noise and ideal voltage jumps"
+    ],
+    "governing_equation_numbers_preserved": true,
+    "source_code_changed": false,
+    "formula_checks": {
+      "normalized_Fourier_coefficients": true,
+      "layered_Poisson_phi_max_error_V": 8.326672684688674e-17,
+      "layered_face_D_max_error_C_per_m2": 1.6653345369377348e-16,
+      "Gauss_balance_max_error_C_per_m2": 2.914335439641036e-16,
+      "physical_TDGL_split_max_Fourier_rate_error": 6.366462912410498e-12,
+      "physical_ETD2_step_max_error_C_per_m2": 1.5265566588595902e-16,
+      "physical_noise_filter_max_error_sqrt_s": 1.3010426069826053e-18,
+      "setup": "8x6 lateral modes; 8 BTO cells; two cells in each dielectric; nonuniform z grid; changing voltage"
+    }
+  }
+}

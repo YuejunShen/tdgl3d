@@ -1,0 +1,4 @@
+# Commit notebooks without outputs; the working copy keeps them.
+# Enable once per clone:  git config filter.strip-notebook.clean "python3 tools/strip_notebook_outputs.py"
+#                         git config filter.strip-notebook.smudge cat
+*.ipynb filter=strip-notebook

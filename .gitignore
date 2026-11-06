@@ -1,0 +1,33 @@
+# Simulation output (large, regenerated from the notebook or scripts)
+runs/
+results_history/
+
+# Reference papers and manuscripts: kept local only
+paper_ref/
+/*.pdf
+
+# Model derivation: kept local only
+docs/derivation/
+
+# Generated presentations
+*.pptx
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# LaTeX build products
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
